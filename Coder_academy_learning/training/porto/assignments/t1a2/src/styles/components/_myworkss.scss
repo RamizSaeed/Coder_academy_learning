@@ -1,0 +1,56 @@
+.mywork {
+
+
+    .work {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+
+
+
+
+
+
+
+
+    
+    text-align: center;
+    h1 {
+        
+        margin: 1rem 0;
+        font-size: 24px;
+        font-weight: 400;
+        text-decoration: underline;
+    }
+
+
+.work-cards {
+    border: 1px solid gray;
+    width: 95vw;
+    margin: 0 auto;
+    padding: 16px 0;
+    border-radius: 4px;
+    margin-bottom: 14px; 
+    img {
+        margin: 32px 0;
+
+           } 
+}  
+
+}
+@media screen and (min-width: 800px) {
+    .work {
+        display: flex;
+        flex-wrap: wrap;
+        .work-cards {
+            width:unset; //30%; // Adjust the width as per your design needs
+            border: none;
+        }
+
+    }
+}
+
+}

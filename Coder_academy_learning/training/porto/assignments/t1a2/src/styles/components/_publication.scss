@@ -1,0 +1,96 @@
+.landing {
+    .container {
+      .publication-list-items {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-bottom: 30px;
+  
+        .publication-info {
+          flex: 1;
+  
+          a {
+            font-size: 1rem;
+            text-decoration: none;
+            color: #3D6099;
+          }
+  
+          h3 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+            text-align: center;
+            line-height: 0.8;
+          }
+  
+          p {
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #341861;
+          }
+  
+          .article-date,
+          .article-categories {
+            margin-right: 5px;
+            justify-content: center;
+            font-size: 0.8rem;
+          }
+  
+          .divider {
+            margin: 0 1px;
+          }
+  
+          .article-categories {
+            display: flex;
+            align-items: center;
+            color: #341861;
+  
+            .folder-icon {
+              margin-right: 5px;
+              width: 16px;
+              height: 16px;
+            }
+          }
+          
+  
+          .author-names, .publication-date {
+            font-style: italic;
+          }
+        }
+  
+        .publication-pic {
+          margin-left: 20px;
+          margin-top: 25px;
+          
+  
+          .article-pic {
+            width: 150px;
+            height: auto;
+          }
+
+          
+        }
+      }
+    }
+  
+    @media (min-width: 768px) {
+      .container {
+        flex-wrap: wrap-reverse;
+      }
+  
+      .publication-list-items {
+        width: 100%;
+        margin-bottom: 60px;
+  
+        .publication-info {
+          width: calc(100% - 170px);
+        }
+  
+        .publication-pic {
+          margin-left: auto;
+          order: 1;
+          width: 150px;
+          height: auto;
+        }
+      }
+    }
+  }

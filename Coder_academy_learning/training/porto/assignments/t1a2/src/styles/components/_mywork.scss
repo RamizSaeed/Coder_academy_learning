@@ -1,0 +1,41 @@
+.mywork {
+    // ...
+    h1 {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+    .work {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+        .work-cards {
+            border: 1px solid gray;
+            width: 95vw;
+            margin: 0 auto;
+            padding: 16px 0;
+            border-radius: 4px;
+            margin-bottom: 14px; 
+
+            img {
+                margin: 32px 0;
+                width: 100%; // Set the image width to 100% of the container
+                height: auto;
+            } 
+
+            h4 {
+                margin-left: 8px; // Add margin to the left of the subtitle
+              }
+        }
+    }
+
+    @media screen and (min-width: 800px) {
+        .work {
+            .work-cards {
+                width: 45%; // Adjust the width as per my design needs
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+.footer {
+    
+    background-color: #56CFE1;
+   // position:inherit;
+    //bottom: 0;
+   // left: 0;
+    width: 100%;
+    .footer-links {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+        list-style-type: none;
+        padding: 0.8rem 0rem;
+
+       /* li {
+            animation: shake;
+            animation-duration: 0.8s;
+            animation-iteration-count: infinite;
+        }*/
+        li {
+            //animation: bounce 1.8s ease-in-out infinite;
+            animation: scale 1.8s ease-in-out infinite;
+          }
+    }
+
+
+  }
+
+
+  

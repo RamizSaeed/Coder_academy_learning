@@ -1,0 +1,60 @@
+.header {
+    a {
+        img {
+            width: 100px;
+            height: auto;
+            display: flex;
+            //justify-content: space-around;
+            align-items: center;
+        }
+    }
+}
+
+
+.landing {
+    .landing-info {
+      img {
+        width: 100%;
+        border-radius:4px ;
+        
+      }  
+    }
+}
+
+.footer-links {
+    img {
+        width: 64px;
+        height: 64px;
+       
+    }
+
+    
+}
+
+.work-cards {
+    img {
+        width: 80vw;
+    }
+}
+
+// to keep the image with special width in desktop view
+@media screen and (min-width: 800px){
+    .landing {
+        .landing-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        img {
+           width: 450px;
+        }
+    }
+  }
+
+  .work-cards {
+    img {
+        width: 600px;
+    }
+}
+
+}

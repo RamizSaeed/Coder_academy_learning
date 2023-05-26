@@ -1,0 +1,30 @@
+.nav-bar {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    li {
+        text-align: center;
+        border-bottom: 3px solid rgb(222, 218, 218);
+        padding: 0.5rem;
+        width: 100%;
+        a {
+           text-decoration: none;
+           color: #31004E;
+        }
+    }
+}
+
+nav {
+    margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 800px) {
+    .nav-bar {
+        flex-direction: row;
+        margin-top: 16px;
+        li{
+            border-top: 0.2rem solid rgb(222, 218, 218);
+        }
+}
+}

@@ -1,0 +1,64 @@
+.landing {
+    .container {
+      .post-list-items {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+  
+        .post-info {
+          flex: 1;
+          a {
+            font-size: 1rem;
+            text-decoration: none;
+            
+            color: #3D6099
+          }
+  
+          h1 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+            text-align: left;
+            line-height: 0.8;
+           
+          }
+  
+          p {
+            margin-bottom: 10px;
+          }
+  
+          .article-date,
+          .article-reading-time,
+          .article-categories {
+            margin-right: 5px;
+            
+            font-size: 0.8rem;
+          }
+  
+          .divider {
+            margin: 0 1px;
+          }
+  
+          .article-categories {
+            display: flex;
+            align-items:center;
+            color: #341861;
+  
+            .folder-icon {
+              margin-right: 5px;
+              width: 16px;
+              height: 16px;
+            }
+          }
+        }
+  
+        .post-pic {
+          margin-left: 20px;
+  
+          .blog-pic {
+            width: 90px;
+            height: auto;
+          }
+        }
+      }
+    }
+  }

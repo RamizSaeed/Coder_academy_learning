@@ -1,0 +1,75 @@
+
+
+/*.intro-container-about{
+    // padding-top:200px ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    .cards-items{
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+    }*/
+    .computer-section  {
+
+        width:100%;
+        
+        /////display container////
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+        .img-display-itmes{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width:90%;
+            margin: auto;
+           
+        
+        img{
+            width: 40%;
+            //padding-bottom: 2%; /* Same as width, sets height */
+            margin-bottom: 10%; /* (100-32*3)/2 */
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-top: 5%;
+            position: relative;
+            border-radius: 10%;
+            box-shadow: 5px 5px 15px 5px grey;
+            transition: transform 0.4s;
+
+            &:hover {
+                transform: scale(1.4); // Increase the scale value to adjust the hover effect
+                z-index: 1;
+            }
+        }
+        
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 800px){
+    .profile-me-img {
+        width:30%;
+    }
+    
+    
+    .img-display-itmes{
+    //img:not(.profile-me-img):hover {
+    img:hover {    
+        transform: scale(1.4); //rotate(0.01deg);
+        z-index: 1;
+       
+      }
+    }
+    }

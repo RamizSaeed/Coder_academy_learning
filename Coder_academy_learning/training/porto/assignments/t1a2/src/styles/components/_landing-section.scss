@@ -1,0 +1,58 @@
+.landing {
+    width: 90vw;
+    margin: 0 auto 2rem auto;
+    padding-bottom: 1rem;
+    .landing-info {
+        h1, h3 {
+            text-align: center;
+            margin: 0.5rem;
+            font-size: 1.6rem;
+            font-weight: 400;
+        }
+        p {
+            text-align: center;
+            margin-bottom: 1rem;
+            
+        }
+    }
+    .optional-background {
+        background-color: rgb(242, 235, 235);
+        padding: 0.5rem 0.6rem;
+        border-radius: 4px;
+        p {
+            margin-bottom: 1rem;
+        }
+    }
+    
+}
+
+.resume-btn {
+    display: flex;
+    justify-content: center;
+    a {
+        display: inline-block;
+        background-color: #56CFE1;
+        padding: 12px 6px;
+        border-radius: 4px;
+        text-decoration: none;
+        color: white;
+        font-weight: 600px;
+        font-size: 600;
+                        
+    }
+
+    
+}
+
+// change screen in desktop view
+@media screen and (min-width: 800px){
+    .landing {
+        .container {
+            display: flex;
+            gap: 20px;
+            .landing-info {
+                flex: 1;
+              }
+        }
+    }
+}
