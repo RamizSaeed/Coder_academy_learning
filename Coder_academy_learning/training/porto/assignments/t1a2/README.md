@@ -20,7 +20,7 @@
   - [Table of contents](#table-of-contents)
     - [The Purpose](#the-purpose)
       - [Host:](#host)
-        - [https://ramiz-saeed=portfolio.netlify.app/](#httpsramiz-saeedportfolionetlifyapp)
+        - [https://ramiz-saeed-portfolio.netlify.app/](#httpsramiz-saeed-portfolionetlifyapp)
         - [https://github.com/RamizSaeed/Coder\_academy\_learning/tree/main/Coder\_academy\_learning/training/porto/assignments/t1a2](#httpsgithubcomramizsaeedcoder_academy_learningtreemaincoder_academy_learningtrainingportoassignmentst1a2)
         - [https://youtu.be/L5n5s6LVwgM](#httpsyoutubel5n5s6lvwgm)
     - [Functionality / features](#functionality--features)
@@ -77,7 +77,7 @@ The webpage has been built up of
 
 #### Host:
 The project is hosted in netlify 
-##### https://ramiz-saeed=portfolio.netlify.app/
+##### https://ramiz-saeed-portfolio.netlify.app/
 
 GitHub
 ##### https://github.com/RamizSaeed/Coder_academy_learning/tree/main/Coder_academy_learning/training/porto/assignments/t1a2
