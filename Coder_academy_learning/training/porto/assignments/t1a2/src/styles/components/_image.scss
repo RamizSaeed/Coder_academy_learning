@@ -1,6 +1,9 @@
+/* Styling for the header section */
 .header {
     a {
+        /* Styling for links within the header */
         img {
+            /* Styling for images within the links */
             width: 100px;
             height: auto;
             display: flex;
@@ -10,8 +13,9 @@
     }
 }
 
-
+/* Styling for the landing section */
 .landing {
+    /* Styling for landing info section within the landing section */
     .landing-info {
       img {
         width: 100%;
@@ -20,8 +24,9 @@
       }  
     }
 }
-
+/* Styling for the footer links */
 .footer-links {
+    /* Styling for images within the footer links */
     img {
         width: 64px;
         height: 64px;
@@ -30,7 +35,7 @@
 
     
 }
-
+/* Styling for work cards (images)*/
 .work-cards {
     img {
         width: 80vw;
@@ -40,6 +45,7 @@
 // to keep the image with special width in desktop view
 @media screen and (min-width: 800px){
     .landing {
+        /* Styling for the landing section in desktop view */
         .landing-info {
             display: flex;
             flex-direction: column;
@@ -50,7 +56,7 @@
         }
     }
   }
-
+/* Styling for work cards in desktop view */
   .work-cards {
     img {
         width: 600px;

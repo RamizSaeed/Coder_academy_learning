@@ -1,7 +1,9 @@
+/* Applying italic style to author names and publication dates */
 .author-names,.publication-date {
     font-style: italic;
   }
 
+  /* Setting the text color for publication info and abstract */
   .publication-info, .abstract {
     color: #341861;
   

@@ -1,20 +1,23 @@
 .landing{
-
-
     .container {
+       /* Setting the top margin to create space between the container and the element above */
+      margin-top: 70px;
+      /* Styling the form element */
       form {
         display: flex;
         flex-direction: column;
         align-items: center;
-  
+        margin-bottom: 40px;
+        /* Adding bottom margin to create space between form groups */
         .form-group {
-          margin-bottom: 50px;
-  
+          margin-bottom: 70px;
+          
+          /* Styling the label element */
           label {
             display: block;
             font-weight: 400;
           }
-  
+          /* Styling the input and textarea elements */
           input,
           textarea {
             width: 300px;
@@ -24,7 +27,7 @@
             resize: none;
           }
         }
-  
+        /* Styling the submit btn */
         button[type="submit"] {
           padding: 10px 20px;
           background-color: #56CFE1;
