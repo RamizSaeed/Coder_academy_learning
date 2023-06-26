@@ -1,4 +1,4 @@
-from assistant import load_patients, save_patients, book_appointment, delete_appointment, display_menu
+from assistant import load_patients, save_patients,view_available_days, book_appointment, delete_appointment, display_menu
 #Define the CSV file path here 
 CSV_FILE_PATH = 'clinic.csv' 
 
@@ -12,13 +12,17 @@ def main():
 
     while True:
         display_menu()
-        choice = input("Enter your choice (1-3): ")
+        choice = input("Enter your choice (1-4): ")
 
         if choice == '1':
-            book_appointment(patients)
+            available_dates = view_available_days(patients)
+            if len(available_dates) == 0:
+                print("No available dates found.")
         elif choice == '2':
-            delete_appointment(patients)
+            book_appointment(patients)
         elif choice == '3':
+            delete_appointment(patients)
+        elif choice == '4':
             save_patients(CSV_FILE_PATH, patients)
             print("Exiting Clinic Appointment Booking and Reminder. Goodbye!")
             break
