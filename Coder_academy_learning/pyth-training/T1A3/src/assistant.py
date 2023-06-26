@@ -52,32 +52,43 @@ def view_available_days(patients):
 
 # Function for booking an appointment
 def book_appointment(patients):
+    
     # Gather patient information
     name = input("Enter patient's name: ")
     contact_number = input("Enter patient's contact number: ")
     email = input("Enter patient's email address (optional): ")
-    appointment_date = input("Enter appointment date (YYYY-MM-DD): ")
+    # I wrped those sentences to repeat until user put correct date
+    while True:
+        appointment_date = input("Enter appointment date (YYYY-MM-DD): ")
 
-    # Check if the appointment date is within the available days
-    available_dates = view_available_days(patients)
-    appointment_date = datetime.datetime.strptime(appointment_date, '%Y-%m-%d').date()
-    if appointment_date not in available_dates:
-        print("Please choose another day. This day is not available.")
-        return
+        # Check if the appointment date is within the available days
+        available_dates = view_available_days(patients)
+        appointment_date = datetime.datetime.strptime(appointment_date, '%Y-%m-%d').date()
+        if appointment_date not in available_dates:
+            print("Please choose another day. This day is not available.")
+            #here we can give the user to choose continue or go to menu again 
+            choice = input("Do you want to try again? (Y/N): ")
+            if choice.lower() == 'n':
+                return
+            #return
+            # here we can skip because the day is not available 
+            continue
 
-    # Create a patient dictionary
-    patient = {
-        'name': name,
-        'contact_number': contact_number,
-        'email': email,
-        'appointment_date': appointment_date
-    }
+        # Create a patient dictionary
+        patient = {
+            'name': name,
+            'contact_number': contact_number,
+            'email': email,
+            'appointment_date': appointment_date
+        }
 
-    # Add the patient to the list and save to file
-    patients.append(patient)
-    save_patients(CSV_FILE_PATH, patients)
-    print("Appointment booked successfully!")
-
+        # Add the patient to the list and save to file
+        patients.append(patient)
+        save_patients(CSV_FILE_PATH, patients)
+        print("Appointment booked successfully!")
+        # Send a reminder to the patient
+        send_reminder_email(patient)
+        break    
 
 # Function to remind the patient 
 def send_reminder_email(patient):
