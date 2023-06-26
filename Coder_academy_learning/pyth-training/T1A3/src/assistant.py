@@ -78,6 +78,12 @@ def book_appointment(patients):
     save_patients(CSV_FILE_PATH, patients)
     print("Appointment booked successfully!")
 
+
+# Function to remind the patient 
+def send_reminder_email(patient):
+# this is simulation to send a message to email
+    print(f"Reminder: Dear {patient['name']}, your appointment is scheduled on {str(patient['appointment_date'])}. Please make sure to arrive on time.")
+
 # Function for canceling an appointment
 def delete_appointment(patients):
     # Get the name of the patient to delete
@@ -100,5 +106,6 @@ def display_menu():
     print("1. View Available Days")
     print("2. Book Appointment")
     print("3. Delete Appointment")
-    print("4. Quit")
+    print("4. Reminder")
+    print("5. Quit")
     
