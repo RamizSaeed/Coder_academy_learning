@@ -1,6 +1,4 @@
-from assistant import save_patients,view_available_days, book_appointment, send_reminders, delete_appointment
-from load_data import load_patients
-from display import display_menu
+from assistant import load_patients, save_patients,view_available_days, book_appointment, send_reminders, delete_appointment, display_menu
 #Define the CSV file path here 
 CSV_FILE_PATH = 'clinic.csv' 
 

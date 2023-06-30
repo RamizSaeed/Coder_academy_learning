@@ -6,7 +6,15 @@ from email.mime.text import MIMEText
 CSV_FILE_PATH = 'clinic.csv'
 
 
-
+# Function to load patient data from a CSV file
+def load_patients(filename):
+    patients = []
+    with open(filename, 'r') as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            #row['appointment_date'] = datetime.datetime.strptime(row['appointment_date'], '%Y-%m-%d').date()
+            patients.append(row)
+    return patients
 
 # Function to save patient data to a CSV file 
 def save_patients(filename, patients):
@@ -82,7 +90,7 @@ def book_appointment(patients):
         print("Appointment booked successfully!")
         # Send a reminder to the patient
         #send_reminder_email(patient)
-        break    
+        #break    
 
 # # Function to remind the patient 
 # def send_reminder_email(patient):
@@ -140,3 +148,12 @@ def delete_appointment(patients):
         print("Appointment not found!")
 
 
+# Function to display the menu options
+def display_menu():
+    print("Clinic Appointment Booking and Reminder")
+    print("1. View Available Days")
+    print("2. Book Appointment")
+    print("3. Delete Appointment")
+    print("4. Reminder")
+    print("5. Quit")
+    
