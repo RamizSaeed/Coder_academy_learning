@@ -1,4 +1,4 @@
-from assistant import load_patients, save_patients,view_available_days, book_appointment, send_reminder_email, delete_appointment, display_menu
+from assistant import load_patients, save_patients,view_available_days, book_appointment, send_reminders, delete_appointment, display_menu
 #Define the CSV file path here 
 CSV_FILE_PATH = 'clinic.csv' 
 
@@ -23,15 +23,16 @@ def main():
         elif choice == '3':
             delete_appointment(patients)
         elif choice == '4':
+            send_reminders(patients)
             # Select a patient from the list
-            if len(patients) > 0:
-                index = int(input("Enter the index of the patient: "))
-                if 0 <= index < len(patients):
-                    send_reminder_email(patients[index])
-                else:
-                    print("Invalid index.")
-            else:
-                print("No patients found.")  
+            # if len(patients) > 0:
+            #     index = int(input("Enter the index of the patient: "))
+            #     if 0 <= index < len(patients):
+            #         send_reminder_email(patients[index])
+            #     else:
+            #         print("Invalid index.")
+            # else:
+            #     print("No patients found.")  
         elif choice == '5':
             save_patients(CSV_FILE_PATH, patients)
             print("Exiting Clinic Appointment Booking and Reminder. Goodbye!")
