@@ -54,7 +54,12 @@ def book_appointment(patients):
     # I wrped those sentences to repeat until user put correct date
     while True:
         appointment_date = input("Enter appointment date (YYYY-MM-DD): ")
-
+        try:
+            #appointment_date = datetime.datetime.strptime(appointment_date, '%Y-%m-%d').date()
+            datetime.datetime.strptime(appointment_date, '%Y-%m-%d')
+        except ValueError:
+            print("Invalid date format. Please enter the date in the format YYYY-MM-DD.")
+            continue
         # Check if the appointment date is within the available days
         available_dates = view_available_days(patients)
         appointment_date = datetime.datetime.strptime(appointment_date, '%Y-%m-%d').date()
@@ -62,8 +67,13 @@ def book_appointment(patients):
             print("Please choose another day. This day is not available.")
             #here we can give the user to choose continue or go to menu again 
             choice = input("Do you want to try again? (Y/N): ")
+            while choice.lower() not in ['y', 'n']:
+                print("Please choose 'Y' for Yes or 'N' for No.")
+                choice = input("Do you want to try again? (Y/N): ")
+
             if choice.lower() == 'n':
                 return
+
             #return
             # here we can skip because the day is not available 
             continue
@@ -102,8 +112,8 @@ def send_reminders(patients):
     reminder_date = today + datetime.timedelta(days=3)  # Calculate the reminder date
     for patient in patients:
         appointment_date = datetime.datetime.strptime(str(patient['appointment_date']), '%Y-%m-%d').date()
-        #if appointment_date == reminder_date:
-        if appointment_date == today:
+        if appointment_date == reminder_date:
+        #if appointment_date == today:
             subject = f"Appointment Reminder: {patient['name']}"
             message = f"Dear {patient['name']},\n\nThis is a reminder for your appointment {reminder_date}. Please arrive on time.\n\nBest regards,\nYour Name"
 
