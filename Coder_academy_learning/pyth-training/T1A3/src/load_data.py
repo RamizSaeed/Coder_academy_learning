@@ -12,6 +12,7 @@ def load_patients(filename):
         # Creating a csv.DictReader object to read the contents of the file as a dictionary
         for row in reader:
             patients.append(row)
+            # here if you use this format you have to import datetime
             #row['appointment_date'] = datetime.datetime.strptime(row['appointment_date'], '%Y-%m-%d').date()
     return patients
     # Returning the list of patient records after reading and processing the CSV file
