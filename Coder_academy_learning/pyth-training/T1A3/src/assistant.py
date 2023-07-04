@@ -103,6 +103,7 @@ def send_reminders(patients):
     reminder_date = today + datetime.timedelta(days=3)  # Calculate the reminder date
     for patient in patients:
         appointment_date = datetime.datetime.strptime(str(patient['appointment_date']), '%Y-%m-%d').date()
+        # Check if the appointment date matches the reminder date
         if appointment_date == reminder_date:
         #if appointment_date == today:
             subject = f"Appointment Reminder: {patient['name']}"
@@ -114,12 +115,16 @@ def send_reminders(patients):
             msg['To'] = patient['email']
 
             try:
+                # Establish a connection with the SMTP server (Gmail in this case)
                 with smtplib.SMTP('smtp.gmail.com', 587) as server:
+                    # Start a secure TLS connection
                     server.starttls()
+                    # Log in to the sender's email account
                     server.login(sender_email, sender_password)
                     #server.sendmail(sender_email, "example0@gmail.com", msg.as_string("Hello again"))
                     server.sendmail(sender_email, patient['email'], msg.as_string())
                 print(f"Reminder sent to {patient['name']}!")
+            # Handle any exceptions that occur during the sending of the reminder
             except Exception as e:
                 print(f"Error occurred while sending reminder to {patient['name']}: {str(e)}")
 
@@ -130,11 +135,14 @@ def delete_appointment(patients):
     # Get the name of the patient to delete
     name = input("Enter patient's name to delete the appointment: ")
     removed = False
+    # Iterate through the list of patients
     for patient in patients:
+        # Check if the patient's name matches the input name
         if patient['name'] == name:
+            # Remove the patient from the list
             patients.remove(patient)
             removed = True
-            save_patients(CSV_FILE_PATH, patients)
+            save_patients(CSV_FILE_PATH, patients) # Save the updated patient data to the CSV file
             print("Appointment deleted successfully!")
             break
     if not removed:
