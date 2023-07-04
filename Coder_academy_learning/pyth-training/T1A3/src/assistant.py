@@ -50,7 +50,6 @@ def view_available_days(patients):
 
 # Function for booking an appointment
 def book_appointment(patients):
-    
     # Gather patient information
     name = input("Enter patient's name: ")
     contact_number = input("Enter patient's contact number: ")
@@ -74,14 +73,11 @@ def book_appointment(patients):
             while choice.lower() not in ['y', 'n']:
                 print("Please choose 'Y' for Yes or 'N' for No.")
                 choice = input("Do you want to try again? (Y/N): ")
-
             if choice.lower() == 'n':
                 return
-
             #return
             # here we can skip because the day is not available 
             continue
-
         # Create a patient dictionary
         patient = {
             'name': name,
@@ -89,7 +85,6 @@ def book_appointment(patients):
             'email': email,
             'appointment_date': appointment_date
         }
-
         # Add the patient to the list and save to file
         patients.append(patient)
         save_patients(CSV_FILE_PATH, patients)

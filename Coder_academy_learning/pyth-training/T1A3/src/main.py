@@ -3,9 +3,6 @@ from load_data import load_patients
 from display import display_menu
 #Define the CSV file path here 
 CSV_FILE_PATH = 'clinic.csv' 
-
-
-
 #  Main function to run the program
 def main():
     
@@ -14,11 +11,14 @@ def main():
 
     while True:
         display_menu()
+        # Display the menu options to the user
         choice = input("Enter your choice (1-5): ")
 
         if choice == '1':
             available_dates = view_available_days(patients)
+            # Call the view_available_days function to retrieve the available dates
             if len(available_dates) == 0:
+                # If there are no available dates, display an appropriate message
                 print("No available dates found.")
         elif choice == '2':
             book_appointment(patients)
@@ -26,15 +26,6 @@ def main():
             delete_appointment(patients)
         elif choice == '4':
             send_reminders(patients)
-            # Select a patient from the list
-            # if len(patients) > 0:
-            #     index = int(input("Enter the index of the patient: "))
-            #     if 0 <= index < len(patients):
-            #         send_reminder_email(patients[index])
-            #     else:
-            #         print("Invalid index.")
-            # else:
-            #     print("No patients found.")  
         elif choice == '5':
             save_patients(CSV_FILE_PATH, patients)
             print("Exiting Clinic Appointment Booking and Reminder. Goodbye!")
