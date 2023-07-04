@@ -24,10 +24,14 @@ def view_available_days(patients):
     today = datetime.date.today()
     next_week_start = today + datetime.timedelta(days=(7 - today.weekday()))
     next_week_end = next_week_start + datetime.timedelta(days=6)
+    
     print("Available Days:")
     # here I use nested loops to iterate in patients list file within period from today to next week end
     current_date = today
+    
     while current_date <= next_week_end:
+    
+        
         has_appointment = False
         for patient in patients:
             appointment_date = datetime.datetime.strptime(str(patient['appointment_date']), '%Y-%m-%d').date()
