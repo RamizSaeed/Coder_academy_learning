@@ -77,7 +77,12 @@ This section represents the main control flow of the appointment clinic app, pro
   
 
 # Mangment plan:
+To manage my project I used Trello boards alongside the app (as shown in the link bellow) to create my ideas which includes:
+- Listing the requirements: This involves carefully identifying and documenting all the necessary features and functionalities that the app should possess. 
+- Prioritizing requirements based on dependencies: Once the requirements are listed, it is essential to prioritize them based on their interdependencies.
+- Starting with the main and simple elements: The initial focus should be on building the core aspects then gradually integarte accurate details.
 
+## Link of Trello boards
 You can find the Trello Board in [here](https://trello.com/invite/b/9uKN0boO/ATTId7fde05b861e757fe5a026698f267e9d08C7DF79/clinic)
 
 ![Screen_Shot_1](./docs/Screen_Shot_1.png)
@@ -181,10 +186,12 @@ It is worth noting that even if incorrect email credentials are entered, the app
 
 # Testing
 
-Testing was conducted via google spreadsheet and smartsheet, for more details see this [link](https://docs.google.com/spreadsheets/d/1ZjEnXHz5Oj8te3-MvndX3ExZW5dWXd8UU81QsOg-K2Q/edit?usp=sharing)
+Manual testing was conducted on the application to validate the functionality of the "View Available Days," "Book Appointment," and "Reminder" features. The tests covered three different scenarios, with each scenario consisting of three test cases. The results of these tests confirmed that the application is working as expected. For more information on testing, please refer to the Clinic App Test spreadsheet at the provided: 
 
+## Link to the Clinic App Test spreadsheet:
 
-   
+Please clich her to see Clinic App Test spreadsheet [link](https://docs.google.com/spreadsheets/d/1ZjEnXHz5Oj8te3-MvndX3ExZW5dWXd8UU81QsOg-K2Q/edit?usp=sharing)
+
       
 
 
