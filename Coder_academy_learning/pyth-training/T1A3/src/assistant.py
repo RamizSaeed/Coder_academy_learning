@@ -89,14 +89,7 @@ def book_appointment(patients):
         patients.append(patient)
         save_patients(CSV_FILE_PATH, patients)
         print("Appointment booked successfully!")
-        # Send a reminder to the patient
-        #send_reminder_email(patient)
         break    
-
-# # Function to remind the patient 
-# def send_reminder_email(patient):
-# # this is simulation to send a message to email
-#     print(f"Reminder: Dear {patient['name']}, your appointment is scheduled on {str(patient['appointment_date'])}. Please make sure to arrive on time.")
 
 
 # Function to remind the patient 
@@ -105,7 +98,6 @@ def send_reminders(patients):
     # sender_password = 'your_password'
     sender_email = 'your_email@example.com'
     sender_password = 'your_password'
-    #sender_password=print("Enter your password, ")
     today = datetime.date.today()
     # here you can use suitable rminder after 2, 3, or 4 days from current day
     reminder_date = today + datetime.timedelta(days=3)  # Calculate the reminder date
